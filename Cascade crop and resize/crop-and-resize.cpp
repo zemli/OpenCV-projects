@@ -52,7 +52,7 @@ Mat detectAndCrop(Mat frame)
 	//equalizeHist(frame_gray, frame_gray);
 	imshow("gray", frame_gray);
 	//detect face
-	face_cascade.detectMultiScale(frame_gray, faces, 1, 3, 0 | CV_HAAR_SCALE_IMAGE, Size(30, 30));
+	face_cascade.detectMultiScale(frame_gray, faces, 1.1, 3, 0 | CV_HAAR_SCALE_IMAGE, Size(60, 60));
 	//crop image
 	Rect roi(faces[0].x, faces[0].y, faces[0].width, faces[0].width);
 	Mat image_roi = frame_gray(roi);
